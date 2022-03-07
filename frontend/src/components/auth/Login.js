@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./Login.css";
 import { login, register } from "../../Action/User";
-import {auth, provider} from '../../firebase'
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -11,11 +11,7 @@ function Login() {
 
   const dispatch = useDispatch();
 
-  const signIn = () => {
-    auth.signInWithPopup(provider).then((auth) => {
-      console.log(auth)
-    })
-  };
+  
 
   const handleControlUser = (e) => {
     e.preventDefault()
@@ -53,29 +49,13 @@ function Login() {
        
         <div className="login__auth">
           <div className="login__authOptions">
-            <div className="login__authOption">
             
-              <img
-                alt=""
-                src="https://img.icons8.com/color/48/000000/google-logo.png"
-              />
-              <p onClick={signIn}>Continue With Google</p>
-            </div>
             
             <div className="login__authDesc">
               <p>
-                <span style={{ color: "blue", cursor: "pointer" }}>
-                  Sign Up With Email
-                </span>
-                . By continuing you indicate that you have read and agree to
-                QAS's
-                <span style={{ color: "blue", cursor: "pointer" }}>
-                  Terms of Service{" "}
-                </span>
-                and{" "}
-                <span style={{ color: "blue", cursor: "pointer" }}>
-                  Privacy Policy
-                </span>
+                
+              Quora (/ˈkwɔːrə/) is an American social question-and-answer website based in Mountain View, California. It was founded on June 25, 2009, and made available to the public on June 21, 2010. Users can collaborate by editing questions and commenting on answers that have been submitted by other users.
+               <p><b> Made By Devanshi  </b> </p>
                 .
               </p>
             </div>
